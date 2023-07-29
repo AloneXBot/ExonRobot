@@ -76,7 +76,7 @@ buttons = [
         InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
     ],
     [
-        InlineKeyboardButton(text="🏡 ᴀʙᴏᴜᴛ 🏡", callback_data="ABG_"),
+        InlineKeyboardButton(text="🏡 ᴏғғɪᴄᴇ 🏡", url=f"https://t.me/AloneXBots"),
         InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
     ],
 ]
@@ -230,8 +230,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     [
                         InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ",
-                            callback_data="ABG_support",
+                            text="🏡 ᴏғғɪᴄᴇ 🏡", url=f"https://t.me/AloneXBots",
                         ),
                     ]
                 )
@@ -360,7 +359,7 @@ def help_button(update: Update, context: CallbackContext):
             help_buttons.append(
                 [
                     InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="ABG_support"),
+                    InlineKeyboardButton(text=""🏡 ᴏғғɪᴄᴇ 🏡", url=f"https://t.me/AloneXBots"),
                 ]
             )
             query.message.edit_text(
@@ -373,7 +372,7 @@ def help_button(update: Update, context: CallbackContext):
         elif prev_match:
             curr_page = int(prev_match.group(1))
             kb = paginate_modules(curr_page - 1, HELPABLE, "help")
-            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/Exon'),
+            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/AloneXBots'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
